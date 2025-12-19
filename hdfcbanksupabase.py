@@ -23,3 +23,5 @@ if choice == "VIEW":
     st.subheader("view users1")
     data = supabase.table("users1").select("*").execute()
     df = pd.DataFrame(data.data)
+    st.dataframe(df)
+
